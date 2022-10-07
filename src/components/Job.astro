@@ -1,0 +1,46 @@
+---
+
+interface Props {
+  company: string,
+  title: string,
+  startDate: string,
+  link: string,
+  endDate: string,
+}
+
+const { company, title, startDate, endDate, link } = Astro.props;
+
+---
+
+<div class="job">
+  <div class="role">
+    {title} at&nbsp;<a href={link} target="_blank">{company}</a>
+  </div>
+  <div class="date">
+    {startDate} until {endDate}
+  </div>
+</div>
+
+<style>
+  .job {
+    padding: 0px 0px 35px 0px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+
+  .role {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .date {
+    font-style: italic;
+    font-size: 14px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+</style>

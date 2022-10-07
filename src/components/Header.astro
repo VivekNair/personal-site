@@ -1,18 +1,19 @@
 ---
 import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../config';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 ---
 
 <header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
+  <div>
+    <h2>
+      {SITE_TITLE}
+    </h2>
+    <h4>
+      {SITE_DESCRIPTION}
+    </h4>
+  </div>
 	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
+		<HeaderLink href="https://twitter.com/virtuallyvivek" target="_blank">Twitter</HeaderLink>
 	</nav>
 </header>
 <style>
@@ -20,6 +21,13 @@ import { SITE_TITLE } from '../config';
 		margin: 0em 0 2em;
 	}
 	h2 {
-		margin: 0.5em 0;
+    margin: 10px 0px 0px 0px;
 	}
+  h4 {
+    margin: 0em;
+    font-weight: 400;
+  }
+  nav {
+    margin: 20px 0px 0px 0px;
+  }
 </style>
