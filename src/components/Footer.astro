@@ -14,6 +14,27 @@
   <kbd>A</kbd>
 </footer>
 
+<script is:inline>
+  let keyIndex = 0
+  const keyOrder = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "KeyB", "KeyA"]
+
+  window.addEventListener("keydown", event => {
+    if (!keyOrder.includes(event.code)) {
+      return
+    }
+    event.preventDefault()
+
+    if (event.code === keyOrder[keyIndex]) {
+      keyIndex++
+      if (keyIndex === keyOrder.length) {
+        console.log('Konami code!')
+      }
+    } else {
+      keyIndex = 0
+    }
+  })
+</script>
+
 <style>
 	footer {
     padding: 20px 0px;
