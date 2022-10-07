@@ -3,7 +3,6 @@
 
 <footer>
   <div class="challenge-row">
-    <div class="label">My email: </div>
     <kbd>↑</kbd>
     <kbd>↑</kbd>
     <kbd>↓</kbd>
@@ -128,7 +127,7 @@
   }
   
   .answer-reveal-row {
-    margin: 30px 0px 0px 0px;
+    margin: 50px 0px 0px 0px;
     padding: 10px 20px;
     cursor: copy;
     /* Declarative code will change this back to flex */
@@ -138,9 +137,15 @@
     align-items: center;
     justify-content: center;
     column-gap: 10px;
-    background-color: var(--answer-reveal-background);
+    background-color: var(--colors-grayA2);
     border-radius: 9999px;
     user-select: text;
+    
+    transition: background-color 200ms ease; 
+  }
+  
+  .answer-reveal-row:hover {
+    background-color: var(--colors-grayA3);
   }
   
   .copy-button {

@@ -7,7 +7,9 @@
 }
 
 :root {
-  --answer-reveal-background: hsl(0 0% 99.0%);
+  /* Colors manually pulled from Radix Colors */
+  --colors-grayA2: hsl(0 0% 99.0%);
+  --colors-grayA3: hsl(0 0% 95.1%);
 }
 
 body {
