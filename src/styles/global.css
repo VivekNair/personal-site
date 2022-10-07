@@ -6,6 +6,10 @@
   src: url(/inter-var-latin.woff2) format('woff2');
 }
 
+:root {
+  --answer-reveal-background: hsl(0 0% 99.0%);
+}
+
 body {
 	font-family: Inter, sans-serif;
 	margin: auto;
