@@ -8,10 +8,45 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "fullbuild": "./build.sh",
+    "deploy": "./deploy.sh",
+    "prepare": "husky install",
+    "prettier-check": "prettier --check '**/*.{ts,tsx,json,astro}'",
+    "prettier-write": "prettier --write '**/*.{ts,tsx,json,astro}'"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,json,astro}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
+    "@astrojs/react": "^1.1.4",
+    "@astrojs/sitemap": "^1.0.0",
     "astro": "^1.4.2",
-    "@astrojs/sitemap": "^1.0.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "proseWrap": "preserve",
+    "endOfLine": "lf",
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": false,
+    "quoteProps": "as-needed"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.21",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.5.5"
   }
 }

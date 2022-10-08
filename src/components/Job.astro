@@ -1,15 +1,13 @@
 ---
-
 interface Props {
-  company: string,
-  title: string,
-  startDate: string,
-  link: string,
-  endDate: string,
+  company: string;
+  title: string;
+  startDate: string;
+  link: string;
+  endDate: string;
 }
 
 const { company, title, startDate, endDate, link } = Astro.props;
-
 ---
 
 <div class="job">
@@ -39,8 +37,12 @@ const { company, title, startDate, endDate, link } = Astro.props;
     font-style: italic;
     font-size: 14px;
   }
-  
+
   a {
     text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 170px;
   }
 </style>
